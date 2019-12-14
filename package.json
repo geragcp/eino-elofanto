@@ -1,0 +1,23 @@
+{
+  "name": "eino-elofanto",
+  "version": "1.0.0",
+  "description": "cloud run testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geragcp/eino-elofanto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geragcp/eino-elofanto/issues"
+  },
+  "homepage": "https://github.com/geragcp/eino-elofanto#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
