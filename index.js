@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
   res.json({
     date: nDate,
-    up: `${(Date.now() - dateStart) / 1000} seg.` 
+    up: `${(Date.now() - dateStart) / 1000} sec.` 
   });
 });
 
