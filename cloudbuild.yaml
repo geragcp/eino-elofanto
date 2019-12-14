@@ -8,7 +8,5 @@ steps:
   # deploy container image to Cloud Run
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run', 'deploy', 'hello-cloud-run', '--image', 'gcr.io/eino-elofanto/hello-cloud-run:${SHORT_SHA}', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
-  env:
-  - 'PORT=8080'
 images:
 - gcr.io/eino-elofanto/hello-cloud-run
