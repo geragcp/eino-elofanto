@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
   timeString = numdays.toString().padStart(1, '0') + ':' + 
       numhours.toString().padStart(2, '0') + ':' + 
       numminutes.toString().padStart(2, '0') + ':' + 
-      numseconds.toString().padStart(2, '0');
+      numseconds.toFixed(2).toString().padStart(2, '0');
 
   res.json({
     date: nDate,
