@@ -11,19 +11,21 @@ app.get('/', (req, res) => {
       timeZone: 'America/Denver'
       });
 
-  dateObj = new Date(Date.now() - dateStart);
-  hours = dateObj.getUTCHours();
-  minutes = dateObj.getUTCMinutes();
-  seconds = dateObj.getSeconds();
-  
-  timeString = hours.toString().padStart(2, '0') + ':' + 
-      minutes.toString().padStart(2, '0') + ':' + 
-      seconds.toString().padStart(2, '0');
+  dateObj = (new Date(Date.now() - dateStart))/1000;
+
+  var numdays = Math.floor(dateObj / 86400);
+  var numhours = Math.floor((dateObj % 86400) / 3600);
+  var numminutes = Math.floor(((dateObj % 86400) % 3600) / 60);
+  var numseconds = ((dateObj % 86400) % 3600) % 60;
+
+  timeString = numdays.toString().padStart(1, '0') + ':' + 
+      numhours.toString().padStart(2, '0') + ':' + 
+      numminutes.toString().padStart(2, '0') + ':' + 
+      numseconds.toString().padStart(2, '0');
 
   res.json({
     date: nDate,
-    up_sec: `${(Date.now() - dateStart) / 1000} sec.`,
-    up_hms: timeString
+    up: timeString
   });
 });
 
