@@ -1,8 +1,10 @@
 const express = require('express');
+const os = require("os");
 const app = express();
 const port = process.env.PORT || 3000;
 
 const dateStart = Date.now();
+const hostname = os.hostname();
 
 
 
@@ -24,6 +26,7 @@ app.get('/', (req, res) => {
       numseconds.toFixed().toString().padStart(2, '0');
 
   res.json({
+    hostname: hostname,
     date: nDate,
     up: timeString
   });
