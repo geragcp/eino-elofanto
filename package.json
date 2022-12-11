@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/geragcp/eino-elofanto#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
